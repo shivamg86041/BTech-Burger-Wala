@@ -1,0 +1,94 @@
+@import "colors";
+
+#menu{
+    width: 100%;
+    min-height: 100vh;
+    background-color: white;
+    padding: 4rem;
+
+    >h1{
+        font-size: 2rem;
+        text-align: center;
+        padding: 2rem;
+    }
+
+    >div{
+        max-width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 1.5rem;
+        justify-content: space-between;
+    }
+}
+
+.menuCard{
+    background-color: white;
+    width: 30%;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.495);
+
+    >div{
+        border-radius: 20px 20px 0 0;
+        background-color: $red;
+        display: flex;
+        align-items: center;
+        padding: 2rem;
+        color: white;
+        height: 4rem;
+
+    }
+    >main{
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        >img{
+            width: 100%;
+            object-fit: contain;
+            aspect-ratio: square;
+        }
+
+        >h5{
+            font-size: 1.5rem;
+        }
+
+        >p{
+            letter-spacing: 1px;
+            text-align: center;
+            text-transform: uppercase;
+            padding: 1rem 0;
+        }
+        >div{
+            text-align: center;
+            text-transform: capitalize;
+            padding: 1rem 0;
+            letter-spacing: 0.5px;
+            font-size: 0.8rem;
+        }
+        >button{
+            background-color: $red;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            width: 100%;
+            padding: 1rem 2rem;
+            &:hover{
+                background-color: $reddark;
+            }
+        }
+    }
+
+}
+
+
+@media screen and (max-width : 600px){
+    #menu > div{
+        flex-direction: column;
+    }
+    .menuCard{
+        width: 100%;
+        margin: 1rem 0;
+    }
+}
